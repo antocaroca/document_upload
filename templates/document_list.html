@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+    <h2>doc List</h2>
+    <p>
+        <a href="{% url 'document_new' %}" class="btn btn-primary">Upload doc</a>
+    </p>
+
+<table class="table mb-0">
+    <thead>
+        <tr>
+            <th>Cover</th>
+            <th>Title</th>
+            <th>date</th>
+            <th>Download</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for doc in docs %}
+            <tr>
+                <td>
+                    {% if doc.cover %}
+                        <img src="{{ doc.cover.url }}" alt="{{ doc.title }}" style="width:100px;"/>
+                    {% else %}
+                        <span class="text-muted">No cover</span>
+                    {% endif %}
+                </td>
+                <td>{{doc.title}}</td>
+                <td>{{doc.date}}</td>
+                <td>
+                    <a href="{{ doc.pdf.url }}" class="btn btn-primary btn-sm" target="_blank">
+                        Download PDF
+                    </a>
+                </td>
+                <td>
+                    <form method="post" action="{% url 'delete_document' doc.pk %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
