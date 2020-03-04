@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Icon/Acciones de control/48px/Bajar-archivo/blue@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M25.4459152,26.3617061 L34.6663376,17.1412837 L36.8501396,19.3250859 L23.8435962,32.3316293 L10.9457483,19.3202926 L13.139095,17.146077 L22.3575526,26.4456483 L22.3575526,4.92514971 L25.4459152,4.92514971 L25.4459152,26.3617061 Z M0.0371140351,27.3550848 L3.12547661,27.3550848 L3.12547661,32.9365982 C3.12547661,36.6984198 6.18964585,39.7618795 9.95075789,39.7618795 L37.8527099,39.7618795 C41.6145315,39.7618795 44.6779912,36.6977103 44.6779912,32.9365982 L44.6779912,27.3550848 L47.7663538,27.3550848 L47.7663538,32.9365982 C47.7663538,38.4032058 43.320347,42.8502421 37.8527099,42.8502421 L9.95075789,42.8502421 C4.48415037,42.8502421 0.0371140351,38.4042353 0.0371140351,32.9365982 L0.0371140351,27.3550848 Z" id="path-1"></path>
+    </defs>
+    <g id="Icon/Acciones-de-control/48px/Bajar-archivo/blue" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <g id="Combined-Shape"></g>
+        <rect id="🎨-color" fill="#002EFF" mask="url(#mask-2)" x="0" y="0" width="48" height="48"></rect>
+    </g>
+</svg>

@@ -1,20 +1,22 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
 
-
-    <h2>doc List</h2>
-    <p>
-        <a href="{% url 'document_new' %}" class="btn btn-primary">Upload doc</a>
-    </p>
+<h2 class="p-2">Documentos</h2>
+<a href="{% url 'document_new' %}">
+    <span>
+        <img src="{% static 'upload.png' %}"  alt="upload icon" width="45"/>
+    </span>
+</a>
 
 <table class="table mb-0">
     <thead>
         <tr>
-            <th>Cover</th>
-            <th>Title</th>
-            <th>date</th>
-            <th>Download</th>
-            <th>Delete</th>
+            <th>Foto</th>
+            <th>Título</th>
+            <th>Fecha</th>
+            <th>Descargar</th>
+            <th>Eliminar</th>
         </tr>
     </thead>
     <tbody>
@@ -24,20 +26,24 @@
                     {% if doc.cover %}
                         <img src="{{ doc.cover.url }}" alt="{{ doc.title }}" style="width:100px;"/>
                     {% else %}
-                        <span class="text-muted">No cover</span>
+                        <span class="text-muted">Sin foto</span>
                     {% endif %}
                 </td>
                 <td>{{doc.title}}</td>
                 <td>{{doc.date}}</td>
                 <td>
-                    <a href="{{ doc.pdf.url }}" class="btn btn-primary btn-sm" target="_blank">
-                        Download PDF
+                    <a href="{{ doc.pdf.url }}" target="_blank">
+                        <span>
+                            <img src="{% static 'download.svg' %}"  alt="download icon" width="30"/>
+                        </span>
                     </a>
                 </td>
                 <td>
                     <form method="post" action="{% url 'delete_document' doc.pk %}">
                         {% csrf_token %}
-                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                        <button type="submit" class="delete-btn">
+                            <img src="{% static 'garbage.svg' %}"  alt="delete icon" width="25"/> 
+                        </button>
                     </form>
                 </td>
             </tr>

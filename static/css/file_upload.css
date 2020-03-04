@@ -1,0 +1,27 @@
+body {
+    background-color: #f2f2f2;
+}
+
+.navbar {
+    background-color: #10069F;
+}
+
+*{
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+    color: #666666;
+}
+
+.regularBlue{
+    background-color: #005CFF;
+}
+
+.regularOrange {
+    background-color: #FF3D00;
+}
+
+.delete-btn {
+    padding: 0;
+    border: none;
+    background: none;
+}
